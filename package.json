@@ -1,0 +1,40 @@
+{
+  "name": "new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.jsx",
+  "scripts": {
+    "dev": "concurrently \"babel-node server\" \"webpack --mode development --config config/webpack.base.config.js --open --watch\"",
+    "prod": "concurrently \"babel-node server\" \"webpack --mode production --config config/webpack.prod.config.js --env.NODE_ENV=production --progress --watch\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/node": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/preset-react": "^7.0.0-beta.49",
+    "@babel/preset-stage-2": "^7.0.0-beta.49",
+    "babel-loader": "^8.0.0-beta.3",
+    "clean-webpack-plugin": "^0.1.19",
+    "concurrently": "^3.5.1",
+    "css-loader": "^0.28.11",
+    "eslint-plugin-import": "^2.12.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.2",
+    "postcss-loader": "^2.1.5",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.11.1",
+    "webpack-cli": "^3.0.2",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  }
+}
