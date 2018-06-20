@@ -1,13 +1,32 @@
-import React from 'react';
-
+import React, { Component, Fragment } from 'react';
+import axios from 'axios';
 import '../../src/style.css';
 
-const App = () => (
-    <div>
-        <h3>Our Application Is Alive</h3>
-        <p>This isn’t reality. This — is fantasy.</p>
-        <p>Yes I am quoting Star Trek I cant help it.</p>
-    </div>
-);
+class App extends Component {
+    state = {
+        obj: { first: 120, second: 'asdfghjkl', third: this.props.third }
+    }
+
+    handler = () => {
+        const obj = { ...this.state.obj };
+        obj.first = 140;
+        this.setState({obj});
+    }
+
+    componentDidMount() {
+        const { obj } = this.state;
+        axios.post('/req', obj).catch(err => console.log(err));
+    }
+
+    render() {
+        const { handler } = this;
+        return (
+            <Fragment>    
+                <h1>ESKHEREEEEEE</h1>
+                <button onClick={ handler } >CLICK</button>
+            </Fragment>
+        )
+    }
+}
 
 export default App;

@@ -3,4 +3,4 @@ import { render } from 'react-dom';
 
 import App from '../client/components/App';
 
-render(<App />, document.getElementById('root'));
+srender(<App third='qwertyuiop' />, document.getElementById('root'));
